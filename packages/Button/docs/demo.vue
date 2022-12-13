@@ -1,8 +1,8 @@
 <template>
   <div>
-    <my-button @click="onClick(1)">第一个</my-button>
-    <my-button @click="onClick(2)">第二个</my-button>
-    <my-button @click="onClick(3)">第三个</my-button>
+    <ms-button @click="onClick(1)">第一个</ms-button>
+    <ms-button @click="onClick(2)">第二个</ms-button>
+    <ms-button @click="onClick(3)">第三个</ms-button>
   </div>
 </template>
 

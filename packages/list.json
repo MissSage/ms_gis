@@ -6,12 +6,6 @@
     "compClassName": "button"
   },
   {
-    "compName": "Foo",
-    "compZhName": "测试组件",
-    "compDesc": "默认：这是一个新组件",
-    "compClassName": "foo"
-  },
-  {
     "compName": "ArcMap",
     "compZhName": "地图",
     "compDesc": "arcgis基础组件",

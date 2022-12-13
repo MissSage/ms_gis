@@ -14,11 +14,6 @@
     path: '/components/Button',
     component: () => import('packages/Button/docs/README.md'),
   },{
-    title: '测试组件',
-    name: 'Foo',
-    path: '/components/Foo',
-    component: () => import('packages/Foo/docs/README.md'),
-  },{
     title: '地图',
     name: 'ArcMap',
     path: '/components/ArcMap',
