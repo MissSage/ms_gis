@@ -1,5 +1,5 @@
 <template>
-  <button class="my-button" @click="$emit('click', $event)">
+  <button class="ms-button" @click="$emit('click', $event)">
     <slot></slot>
   </button>
 </template>
@@ -9,7 +9,7 @@ defineEmits(['click'])
 </script>
 
 <style scoped lang="less">
-.my-button {
+.ms-button {
   appearance: none;
   padding: 5px 10px;
   background: lightskyblue;
