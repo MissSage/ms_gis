@@ -33,4 +33,5 @@ import PrintTemplate from '@arcgis/core/rest/support/PrintTemplate';
 import PrintParameters from '@arcgis/core/rest/support/PrintParameters';
 import LinearUnit from '@arcgis/core/rest/support/LinearUnit';
 import SketchViewModel from '@arcgis/core/widgets/Sketch/SketchViewModel';
-export { SketchViewModel, LinearUnit, PrintParameters, PrintTemplate, print, Layer, find, FindParameters, BufferParameters, geometryService, MapImageLayer, ArcSymbol, Extent, geometryEngine, geoprocessor, identify, query, Query, Graphic, Point, PictureMarkerSymbol, TextSymbol, Map, MapView, IdentifyParameters, Draw, GraphicsLayer, FeatureLayer, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, Color, Polygon, Polyline, Geometry, };
+import * as reactiveUtils from '@arcgis/core/core/reactiveUtils';
+export { reactiveUtils, SketchViewModel, LinearUnit, PrintParameters, PrintTemplate, print, Layer, find, FindParameters, BufferParameters, geometryService, MapImageLayer, ArcSymbol, Extent, geometryEngine, geoprocessor, identify, query, Query, Graphic, Point, PictureMarkerSymbol, TextSymbol, Map, MapView, IdentifyParameters, Draw, GraphicsLayer, FeatureLayer, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, Color, Polygon, Polyline, Geometry, };

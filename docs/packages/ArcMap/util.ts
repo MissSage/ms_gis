@@ -33,7 +33,9 @@ import PrintTemplate from '@arcgis/core/rest/support/PrintTemplate'
 import PrintParameters from '@arcgis/core/rest/support/PrintParameters'
 import LinearUnit from '@arcgis/core/rest/support/LinearUnit'
 import SketchViewModel from '@arcgis/core/widgets/Sketch/SketchViewModel'
+import * as reactiveUtils from '@arcgis/core/core/reactiveUtils'
 export {
+  reactiveUtils,
   SketchViewModel,
   LinearUnit,
   PrintParameters,
