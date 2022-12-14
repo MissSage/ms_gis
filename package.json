@@ -1,5 +1,5 @@
 {
-  "name": "ms_gis",
+  "name": "@missssage/ms_gis",
   "version": "0.0.2",
   "scripts": {
     "dev": "vite --config ./build/base.config.ts",
