@@ -6,10 +6,11 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   ...baseConfig,
   build: {
-    outDir: 'dist',
+    outDir: 'lib',
     lib: {
       entry: resolve(__dirname, '../packages/index.ts'),
       name: 'ms_gis',
+      formats: ['es'],
       fileName: (format) => `ms_gis.${format}.js`,
     },
     rollupOptions: {

@@ -21,6 +21,11 @@ import demo from './demo.vue'
 `arg1` | 第一个参数 | string | - | `default` | 否 
 `arg2` | 第二个参数 | string | - | `default` | 否
 
+## 方法
+事件名 | 说明 | 参数列表 | 参数说明
+:-: | :-: | :-: | :-:
+`customMethod` | 自定义事件 | [a, b, c] | a：参数一；b：参数二；c：参数三
+
 ## 事件
 事件名 | 说明 | 参数列表 | 参数说明
 :-: | :-: | :-: | :-:

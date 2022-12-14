@@ -28,5 +28,16 @@
     "vite-plugin-md": "^0.11.4",
     "vue-router": "^4.0.12",
     "vue-tsc": "^0.28.10"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
+  "private": false,
+  "exports": {
+    ".": {
+      "import": "./lib/packages"
+    }
   }
 }

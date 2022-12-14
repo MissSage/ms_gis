@@ -8,13 +8,11 @@
 import { App, Plugin } from 'vue';
 
 import { ButtonPlugin } from './Button';
-import { FooPlugin } from './Foo';
 import { ArcMapPlugin } from './ArcMap';
 
 const MYKitPlugin: Plugin = {
   install(app: App) {
     ButtonPlugin.install?.(app);
-    FooPlugin.install?.(app);
     ArcMapPlugin.install?.(app);
   },
 };
@@ -22,5 +20,4 @@ const MYKitPlugin: Plugin = {
 export default MYKitPlugin;
 
 export * from './Button'
-export * from './Foo'
 export * from './ArcMap'

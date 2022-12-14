@@ -1,3 +1,4 @@
+<!-- 预览组件，用于在md中显示slot中的源码 -->
 <template>
   <div class="mykit-preview">
     <section>
@@ -28,6 +29,7 @@ export default {
       default: '',
       require: true,
     },
+    
     /** 要显示代码的组件 */
     demoName: {
       type: String,
