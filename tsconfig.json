@@ -14,17 +14,8 @@
     "skipLibCheck": true,
     "paths": {
       "packages/*": ["./packages/*"]
-    }
+    },
+    "types": ["unplugin-icons/types/vue"]
   },
-  "include": [
-    "*.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "packages/**/*.ts",
-    "packages/**/*.d.ts",
-    "packages/**/*.tsx",
-    "packages/**/*.vue"
-  ]
+  "include": ["*.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue", "./components.d.ts"]
 }

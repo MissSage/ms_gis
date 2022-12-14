@@ -18,6 +18,21 @@
     name: 'ArcMap',
     path: '/components/ArcMap',
     component: () => import('packages/ArcMap/docs/README.md'),
+  },{
+    title: '抽屉布局',
+    name: 'DrawerBox',
+    path: '/components/DrawerBox',
+    component: () => import('packages/DrawerBox/docs/README.md'),
+  },{
+    title: '抽屉',
+    name: 'SideDrawer',
+    path: '/components/SideDrawer',
+    component: () => import('packages/SideDrawer/docs/README.md'),
+  },{
+    title: '弹窗',
+    name: 'Panel',
+    path: '/components/Panel',
+    component: () => import('packages/Panel/docs/README.md'),
   }];
  
  const routerConfig = {
