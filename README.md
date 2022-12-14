@@ -98,9 +98,9 @@ defineEmits(['click']);
 import { createApp } from 'vue'
 import App from './app.vue'
 
-import MyKit from 'ms_gis'
+import ms_gis from 'ms_gis'
 
-createApp(App).use(MyKit)
+createApp(App).use(ms_gis)
 
 ```
 
@@ -138,13 +138,13 @@ import { App, Plugin } from 'vue';
 
 import { ButtonPlugin } from './Button';
 
-const MyKitPlugin: Plugin = {
+const ms_gisPlugin: Plugin = {
   install(app: App) {
     ButtonPlugin.install?.(app);
   },
 };
 
-export default MyKitPlugin;
+export default ms_gisPlugin;
 
 export * from './Button';
 ```
@@ -175,9 +175,9 @@ export * from './Button';
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import MyKit from '../packages';
+import ms_gis from '../packages';
 
-createApp(App).use(MyKit).mount('#app')
+createApp(App).use(ms_gis).mount('#app')
 
 ```
 改写 `src/App.vue`，引入 `<my-button></my-button>` 试一下：
@@ -658,7 +658,7 @@ export default defineConfig({
     outDir: 'dist',
     lib: {
       entry: resolve(__dirname, '../packages/index.ts'),
-      name: 'MYKit',
+      name: 'ms_gis',
       fileName: (format) => `ms_gis.${format}.js`,
     },
     rollupOptions: {

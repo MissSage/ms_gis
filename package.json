@@ -37,7 +37,11 @@
   "private": false,
   "exports": {
     ".": {
-      "import": "./lib/packages"
+      "import": "./lib/ms_gis.es.js"
+    },
+    "./style.css": {
+      "import": "./lib/style.css"
     }
-  }
+  },
+  "types": "./lib/packages/index.d.ts"
 }

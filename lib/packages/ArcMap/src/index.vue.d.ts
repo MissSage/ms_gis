@@ -1,4 +1,4 @@
-import MapView from "@arcgis/core/views/MapView";
+import { MapView } from "../util";
 declare const _sfc_main: import("vue").DefineComponent<{
     basemap: {
         type: StringConstructor;

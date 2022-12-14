@@ -1,6 +1,6 @@
 <!-- 预览组件，用于在md中显示slot中的源码 -->
 <template>
-  <div class="mykit-preview">
+  <div class="ms_gis-preview">
     <section>
       <slot></slot>
     </section>
@@ -76,7 +76,7 @@ export default {
 pre {
   line-height: 0;
 }
-.mykit-preview {
+.ms_gis-preview {
   border: 4px;
   border: 1px dashed #e7e7e7;
   padding: 10px;
