@@ -1,5 +1,5 @@
 {
-  "name": "my-kit",
+  "name": "ms_gis",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite --config ./build/base.config.ts",
