@@ -18,7 +18,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed } from "vue"
+import { computed, StyleValue } from "vue"
 import { Icon } from "@iconify/vue"
 
 const emit = defineEmits<{ (e: "collapse", isCollapsed: boolean): void }>()
@@ -40,11 +40,11 @@ const props = defineProps<{
   width?: number
   title?: string
 }>()
-const styleVars = computed<any>(() => {
+const styleVars = computed<StyleValue>(() => {
   return {
     "--width": (props.width || 350) + "px",
     "--collapsedWidth": -(props.width || 350) + "px"
-  }
+  } as StyleValue
 })
 const handleCollapse = () => {
   emit("collapse", !props.modelValue)
