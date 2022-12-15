@@ -7,6 +7,3 @@ import { Plugin } from 'vue';
 declare const MSPlugin: Plugin;
 export default MSPlugin;
 export * from './ArcMap';
-export * from './DrawerBox';
-export * from './SideDrawer';
-export * from './Panel';
