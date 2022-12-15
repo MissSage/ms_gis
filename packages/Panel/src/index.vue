@@ -18,19 +18,14 @@
 
               <div v-if="showClose || maxMin" class="panel-close">
                 <template v-if="maxMin">
-                  <ElIcon v-if="state.maxmin === 'normal' || state.maxmin === 'max'" @click="() => toggleMaxMin('min')" title="最小化">
-                    <Minus width="1em" height="1em"/>
-                  </ElIcon>
-                  <ElIcon v-if="state.maxmin === 'min' || state.maxmin === 'normal'" title="最大化" @click="() => toggleMaxMin('max')">
-                    <MSFullscreen width="1em" height="1em"/>
-                  </ElIcon>
-                  <ElIcon v-if="state.maxmin === 'min' || state.maxmin === 'max'" title="还原" @click="() => toggleMaxMin('normal')">
-                    <MSFullscreenExit width="1em" height="1em"/>
-                  </ElIcon>
+                  <Icon  v-if="state.maxmin === 'normal' || state.maxmin === 'max'" icon="mdi:minus-thick" @click="() => toggleMaxMin('min')" title="最小化"></Icon>
+
+                  <Icon v-if="state.maxmin === 'min' || state.maxmin === 'normal'" title="最大化" icon="mdi:fullscreen" @click="() => toggleMaxMin('max')"></Icon>
+
+                  <Icon v-if="state.maxmin === 'min' || state.maxmin === 'max'" title="还原" icon="mdi:fullscreen-exit" @click="() => toggleMaxMin('normal')"></Icon>
+
                 </template>
-                <ElIcon v-if="showClose" title="关闭" @click="Close">
-                  <CloseIcon width="1em" height="1em"></CloseIcon>
-                </ElIcon>
+                <Icon v-if="showClose" title="关闭" @click="Close" icon="mdi:close-thick"></Icon>
               </div>
             </div>
             <div class="panel-content">
@@ -50,13 +45,10 @@
 
 <script lang="ts" setup>
 import { computed, toRefs, reactive, onMounted, ref, onBeforeUnmount, watch, nextTick } from "vue"
-import { Close as CloseIcon, Minus } from "@element-plus/icons"
-
 import { v4 as uuidv4 } from "uuid"
 import { client } from "../util"
-import MSFullscreenExit from "~icons/material-symbols/fullscreen-exit"
-import MSFullscreen from "~icons/material-symbols/fullscreen"
-import { ElIcon } from "element-plus"
+import { Icon } from "@iconify/vue"
+
 const props = withDefaults(
   defineProps<{
     telport?: string | HTMLElement

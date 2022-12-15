@@ -6,7 +6,6 @@
 import { Plugin } from 'vue';
 declare const MSPlugin: Plugin;
 export default MSPlugin;
-export * from './Button';
 export * from './ArcMap';
 export * from './DrawerBox';
 export * from './SideDrawer';

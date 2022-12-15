@@ -10,31 +10,17 @@
     </div>
     <slot v-else name="default"> </slot>
     <div v-if="hideBar !== true" class="control-fold-btn" :class="['control-fold-btn-' + (direction || 'ltr'), 'control-fold-btn-' + (barPosition || 'center')]" @click="handleCollapse">
-      <ElIcon :size="14">
-        <template v-if="direction === 'rtl'">
-          <CaretRight v-if="modelValue"></CaretRight>
-          <CaretLeft v-else></CaretLeft>
-        </template>
-        <template v-else-if="direction === 'ltr'">
-          <CaretLeft v-if="modelValue"></CaretLeft>
-          <CaretRight v-else></CaretRight>
-        </template>
-        <template v-else-if="direction === 'ttb'">
-          <CaretTop v-if="modelValue"></CaretTop>
-          <CaretBottom v-else></CaretBottom>
-        </template>
-        <template v-else-if="direction === 'btt'">
-          <CaretBottom v-if="modelValue"></CaretBottom>
-          <CaretTop v-else></CaretTop>
-        </template>
-      </ElIcon>
+      <Icon v-if="direction === 'rtl'" :icon="modelValue ? 'mdi:menu-right' : 'mdi:menu-left'"></Icon>
+      <Icon v-if="direction === 'ltr'" :icon="modelValue ? 'mdi:menu-left' : 'mdi:menu-right'"></Icon>
+      <Icon v-if="direction === 'ttb'" :icon="modelValue ? 'mdi:menu-up' : 'mdi:menu-down'"></Icon>
+      <Icon v-if="direction === 'btt'" :icon="modelValue ? 'mdi:menu-down' : 'mdi:menu-up'"></Icon>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { CaretBottom, CaretTop, CaretLeft, CaretRight } from "@element-plus/icons"
 import { computed } from "vue"
-import { ElIcon } from "element-plus"
+import { Icon } from "@iconify/vue"
+
 const emit = defineEmits<{ (e: "collapse", isCollapsed: boolean): any }>()
 const props = defineProps<{
   /**
@@ -65,31 +51,39 @@ const handleCollapse = () => {
 }
 </script>
 <style lang="scss" scoped>
-.layout-drawer {
-  background-color: rgba(255, 255, 255, 0.9);
-}
 .dark {
-  .layout-drawer,
+  &.layout-drawer,
   .control-fold-btn {
     background-color: #272a3e;
+    color: #fff;
   }
   .right-drawer-title {
-    background-color: var(--el-fill-color-light);
+    background-color: #333646;
   }
 }
 .darkblue {
-  .layout-drawer,
+  &.layout-drawer,
   .control-fold-btn {
     background-color: rgba(21, 45, 68, 0.9);
+    color: #fff;
   }
   .right-drawer-title {
     background-color: #1f2d40;
+  }
+}
+.light {
+  &.layout-drawer,
+  .control-fold-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
   }
 }
 .layout-drawer {
   box-shadow: 0 0 3px #6b719a;
   transition: all ease 0.5s;
   z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
   &:hover {
     box-shadow: 0 0 5px #4b6179;
   }
@@ -169,10 +163,7 @@ const handleCollapse = () => {
   cursor: pointer;
   background-color: rgb(226, 227, 227);
   .fold-icon {
-    width: 14px;
-    height: 14px;
     font-size: 14px;
-    // margin-left: -1px;
   }
   &.control-fold-btn-ltr,
   &.control-fold-btn-rtl {
@@ -216,9 +207,9 @@ const handleCollapse = () => {
   &.control-fold-btn-ttb {
     height: 14px;
     width: 100px;
-
     padding: 0;
     text-align: center;
+    line-height: 14px;
     &.control-fold-btn-center {
       left: 0;
       right: 0;

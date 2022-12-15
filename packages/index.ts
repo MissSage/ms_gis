@@ -7,7 +7,6 @@
  */
 import { App, Plugin } from 'vue';
 
-import { ButtonPlugin } from './Button';
 import { ArcMapPlugin } from './ArcMap';
 import { DrawerBoxPlugin } from './DrawerBox';
 import { SideDrawerPlugin } from './SideDrawer';
@@ -15,7 +14,6 @@ import { PanelPlugin } from './Panel';
 
 const MSPlugin: Plugin = {
   install(app: App) {
-    ButtonPlugin.install?.(app);
     ArcMapPlugin.install?.(app);
     DrawerBoxPlugin.install?.(app);
     SideDrawerPlugin.install?.(app);
@@ -25,7 +23,6 @@ const MSPlugin: Plugin = {
 
 export default MSPlugin;
 
-export * from './Button'
 export * from './ArcMap'
 export * from './DrawerBox'
 export * from './SideDrawer'
