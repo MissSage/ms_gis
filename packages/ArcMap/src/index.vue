@@ -1,14 +1,12 @@
 <template>
-  <div id="viewDiv" ref="refMap" class="viewDiv"></div>
+  <div id="viewDiv" class="viewDiv"></div>
 </template>
 
 <script lang="ts" setup>
 import { MapView, Map } from "../util"
-import { ref } from "vue"
 const props = defineProps<{
   basemap?: "satellite" | "hybrid" | "terrain" | "oceans" | "osm" | "dark-gray-vector" | "gray-vector" | "streets-vector" | "topo-vector" | "streets-night-vector" | "streets-relief-vector" | "streets-navigation-vector"
 }>()
-const refMap = ref<HTMLDivElement>()
 const init: (options?: { center?: number[]; zoom?: number }) => __esri.MapView = (options?: { center?: number[]; zoom?: number }) => {
   const map = new Map({
     // satellite", "hybrid", "terrain", "oceans", "osm", "dark-gray-vector", "gray-vector", "streets-vector", "topo-vector", "streets-night-vector", "streets-relief-vector", "streets-navigation-vector"

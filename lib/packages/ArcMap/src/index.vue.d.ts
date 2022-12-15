@@ -8,7 +8,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
     props: {
         basemap?: "satellite" | "hybrid" | "terrain" | "oceans" | "osm" | "dark-gray-vector" | "gray-vector" | "streets-vector" | "topo-vector" | "streets-night-vector" | "streets-relief-vector" | "streets-navigation-vector" | undefined;
     };
-    refMap: import("vue").Ref<HTMLDivElement | undefined>;
     init: (options?: {
         center?: number[] | undefined;
         zoom?: number | undefined;
