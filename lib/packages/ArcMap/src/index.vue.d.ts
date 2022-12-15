@@ -13,9 +13,10 @@ declare const _sfc_main: import("vue").DefineComponent<{
         center?: number[] | undefined;
         zoom?: number | undefined;
     } | undefined) => __esri.MapView;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<{
-    basemap?: unknown;
-} & {} & {
-    basemap?: string | undefined;
-}>, {}>;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    basemap: {
+        type: StringConstructor;
+        required: false;
+    };
+}>>, {}>;
 export default _sfc_main;
