@@ -80,7 +80,7 @@ const computedContentWidthClass = computed(() => {
   props.rightDrawer && !props.rightDrawerAbsolute && state.rightDrawerOpen && count++
   return count === 0 ? "" : "layout-drawerbox-content-v-" + count
 })
-const toggleDrawer = (drawer: "rtl" | "ltr" | "btt" | "ttb", open?: boolean) => {
+const toggleDrawer = (drawer: "rtl" | "ltr" | "btt" | "ttb", open?: boolean):void => {
   switch (drawer) {
     case "rtl":
       state.rightDrawerOpen = open === undefined ? !state.rightDrawerOpen : open

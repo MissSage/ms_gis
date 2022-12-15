@@ -15,7 +15,7 @@ const init: (options?: { center?: number[]; zoom?: number }) => __esri.MapView =
     basemap: props.basemap || "satellite"
   })
   const view = new MapView({
-    container: refMap.value,
+    container: 'viewDiv',
     map,
     center: options?.center || [117.09, 30.64],
     zoom: options?.zoom || 5,

@@ -21,7 +21,7 @@
 import { computed } from "vue"
 import { Icon } from "@iconify/vue"
 
-const emit = defineEmits<{ (e: "collapse", isCollapsed: boolean): any }>()
+const emit = defineEmits<{ (e: "collapse", isCollapsed: boolean): void }>()
 const props = defineProps<{
   /**
    * 隐藏边上的把手

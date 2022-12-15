@@ -1,0 +1,1 @@
+import{ax as e}from"./vendor.ad8aa1ba.js";function d(o,a,n=0){const r=e(o,0,c);for(let t=0;t<4;t++)a[n+t]=Math.floor(256*u(r*l[t]))}function f(o,a=0){let n=0;for(let r=0;r<4;r++)n+=o[a+r]*i[r];return n}const l=[1,256,65536,16777216],i=[1/256,1/65536,1/16777216,1/4294967296],c=f(new Uint8ClampedArray([255,255,255,255]));function u(o){return o-Math.floor(o)}export{d as o,f as r};
