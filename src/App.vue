@@ -21,7 +21,7 @@ const data = reactive({
 })
 </script>
 
-<style lang="less">
+<style lang="scss">
 html,
 body {
   margin: 0;

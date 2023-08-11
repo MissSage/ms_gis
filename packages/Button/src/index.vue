@@ -8,7 +8,7 @@
 defineEmits(['click'])
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 .ms-button {
   appearance: none;
   padding: 5px 10px;
