@@ -1,11 +1,5 @@
 [
   {
-    "compName": "Button",
-    "compZhName": "按钮",
-    "compDesc": "这是一个按钮",
-    "compClassName": "button"
-  },
-  {
     "compName": "ArcMap",
     "compZhName": "地图",
     "compDesc": "arcgis基础组件",

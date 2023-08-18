@@ -1,20 +1,26 @@
 [
   {
-    "compName": "Button",
-    "compZhName": "按钮",
-    "compDesc": "这是一个按钮",
-    "compClassName": "button"
-  },
-  {
-    "compName": "Foo",
-    "compZhName": "测试组件",
-    "compDesc": "默认：这是一个新组件",
-    "compClassName": "foo"
-  },
-  {
     "compName": "ArcMap",
     "compZhName": "地图",
     "compDesc": "arcgis基础组件",
     "compClassName": "arc-map"
+  },
+  {
+    "compName": "DrawerBox",
+    "compZhName": "抽屉布局",
+    "compDesc": "可以从上下左右拉出抽屉",
+    "compClassName": "drawer-box"
+  },
+  {
+    "compName": "SideDrawer",
+    "compZhName": "抽屉",
+    "compDesc": "用于抽屉布局组件DrawerBox的抽屉",
+    "compClassName": "side-drawer"
+  },
+  {
+    "compName": "Panel",
+    "compZhName": "弹窗",
+    "compDesc": "一个可拖拽的弹窗组件",
+    "compClassName": "panel"
   }
 ]

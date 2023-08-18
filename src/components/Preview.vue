@@ -1,5 +1,6 @@
+<!-- 预览组件，用于在md中显示slot中的源码 -->
 <template>
-  <div class="mykit-preview">
+  <div class="ms_gis-preview">
     <section>
       <slot></slot>
     </section>
@@ -28,6 +29,7 @@ export default {
       default: '',
       require: true,
     },
+    
     /** 要显示代码的组件 */
     demoName: {
       type: String,
@@ -43,7 +45,7 @@ export default {
   },
   computed: {
     previewSourceCode() {
-      return this.sourceCode.replace(/'\.\.\/\.\.\/index'/g, `'@tencent/my-kit'`);
+      return this.sourceCode.replace(/'\.\.\/\.\.\/index'/g, `'@tencent/ms_gis'`);
     },
   },
   async mounted() {
@@ -53,7 +55,7 @@ export default {
           await import(/* @vite-ignore */ `../../packages/${this.compName}/docs/${this.demoName}.vue?raw`)
         ).default;
       } else {
-        this.sourceCode = await fetch(`${isDev ? '' : '/MY-Kit'}/packages/${this.compName}/docs/${this.demoName}.vue`).then((res) => res.text());
+        this.sourceCode = await fetch(`${isDev ? '' : '/ms_gis'}/packages/${this.compName}/docs/${this.demoName}.vue`).then((res) => res.text());
       }
     }
     await this.$nextTick();
@@ -74,7 +76,7 @@ export default {
 pre {
   line-height: 0;
 }
-.mykit-preview {
+.ms_gis-preview {
   border: 4px;
   border: 1px dashed #e7e7e7;
   padding: 10px;

@@ -7,17 +7,14 @@
  */
 import { App, Plugin } from 'vue';
 
-import { ButtonPlugin } from './Button';
 import { ArcMapPlugin } from './ArcMap';
 
-const MYKitPlugin: Plugin = {
+const MSPlugin: Plugin = {
   install(app: App) {
-    ButtonPlugin.install?.(app);
     ArcMapPlugin.install?.(app);
   },
 };
 
-export default MYKitPlugin;
+export default MSPlugin;
 
-export * from './Button'
 export * from './ArcMap'

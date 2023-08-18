@@ -7,18 +7,34 @@ import Markdown from 'vite-plugin-vue-markdown';
 export default defineConfig({
   resolve: {
     alias: {
-      '@': resolve(__dirname, '../src'),
-      packages: resolve(__dirname, '../packages'),
-    },
+      "@": resolve(__dirname, "../src"),
+      packages: resolve(__dirname, "../packages")
+    }
   },
   plugins: [
     vue({
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/, /\.md$/]
     }),
-    Markdown(),
+    Markdown()
   ],
   server: {
     host: 'localhost',
     port: 3456
+  },
+  css: {
+    postcss: {
+      plugins: [
+        {
+          postcssPlugin: "internal:charset-removal",
+          AtRule: {
+            charset: atRule => {
+              if (atRule.name === "charset") {
+                atRule.remove()
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 });

@@ -1,6 +1,6 @@
 {
-  "name": "my-kit",
-  "version": "0.0.0",
+  "name": "@missssage/ms_gis",
+  "version": "0.0.13",
   "scripts": {
     "dev": "vite --config ./build/base.config.ts",
     "build:doc": "vue-tsc --noEmit && vite build --config ./build/doc.config.ts && node script/copyDir.js",
@@ -10,7 +10,11 @@
   "dependencies": {
     "@arcgis/core": "^4.27.6",
     "prismjs": "^1.29.0",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "element-plus": "^2.2.26",
+    "uuid": "^8.3.2",
+    "@iconify/vue": "^4.0.2",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@types/node": "^20.4.9",
@@ -24,7 +28,25 @@
     "vite-plugin-copy": "^0.1.6",
     "vite-plugin-dts": "^3.5.1",
     "vite-plugin-vue-markdown": "^0.23.7",
-    "vue-router": "^4.2.4",
     "vue-tsc": "^1.8.8"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
+  "private": false,
+  "exports": {
+    ".": {
+      "import": "./lib/ms_gis.es.js"
+    },
+    "./style.css": {
+      "import": "./lib/style.css"
+    }
+  },
+  "types": "./lib/packages/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

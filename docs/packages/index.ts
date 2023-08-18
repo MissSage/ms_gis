@@ -7,20 +7,23 @@
  */
 import { App, Plugin } from 'vue';
 
-import { ButtonPlugin } from './Button';
-import { FooPlugin } from './Foo';
 import { ArcMapPlugin } from './ArcMap';
+import { DrawerBoxPlugin } from './DrawerBox';
+import { SideDrawerPlugin } from './SideDrawer';
+import { PanelPlugin } from './Panel';
 
-const MYKitPlugin: Plugin = {
+const MSPlugin: Plugin = {
   install(app: App) {
-    ButtonPlugin.install?.(app);
-    FooPlugin.install?.(app);
     ArcMapPlugin.install?.(app);
+    DrawerBoxPlugin.install?.(app);
+    SideDrawerPlugin.install?.(app);
+    PanelPlugin.install?.(app);
   },
 };
 
-export default MYKitPlugin;
+export default MSPlugin;
 
-export * from './Button'
-export * from './Foo'
 export * from './ArcMap'
+export * from './DrawerBox'
+export * from './SideDrawer'
+export * from './Panel'
